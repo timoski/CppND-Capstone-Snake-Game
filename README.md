@@ -30,6 +30,26 @@ In this project, you can build your own C++ application or extend this Snake gam
 3. Compile: `cmake .. && make`
 4. Run it: `./SnakeGame`.
 
+## Choosen Project
+This repo is based on https://github.com/udacity/CppND-Capstone-Snake-Game
+For completing this Project a Highscore list is added.
+The highscore list is saved under build/highscore.txt
+When starting the game, the user has different options:
+1. View best users and their score
+2. Select from players in highscore list
+3. Create a new player
+After finishing the game the user will be added to the Highscore list, if the score is higher than 0. If the user is already in the Highscore list, the highscore will be updated.
+
+## Rubric Criteria
+1. Loops, Functions: Use of different control structeres: if-else, while, switch, continue, break, range-based loop, for loop, while-loop. 
+2. I/O: Highscore is read and written to text file.
+3. User In/Output: User, can select different options, input his name, output highscore list, etc.
+4. OOP: Added new classes and functions
+5. Function Overloading: Player constructor
+6. Classes use appropriate access specifiers for class members
+7. Class constructors utilize member initialization lists and default values.
+8. Usage of references: for example in gamemenuinterface.cpp Line 139
+
 
 ## CC Attribution-ShareAlike 4.0 International
 
