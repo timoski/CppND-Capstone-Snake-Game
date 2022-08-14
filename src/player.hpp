@@ -5,6 +5,7 @@
 
 class Player
 {
+private:
    std::string name;
    int highscore=0;
 public:

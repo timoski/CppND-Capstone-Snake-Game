@@ -10,11 +10,12 @@ enum class MenuOption
 class GameMenuInterface
 {
 public: 
-   MenuOption showMenu();
-   void showHighscore();
-   Player addPlayer();
-   Player selectPlayer();
-   std::vector<Player> getPlayers();
-   void saveScore(Player player);
+   MenuOption showMenu() const;
+   void showHighscore() const;
+   Player addPlayer() const;
+   Player selectPlayer() const;
+   void saveScore(Player player) const;
+private:
+   std::vector<Player> getPlayers() const;
 };
 

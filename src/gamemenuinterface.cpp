@@ -3,7 +3,7 @@
 #include "gamemenuinterface.hpp"
 #include <fstream>
 
-MenuOption GameMenuInterface::showMenu()
+MenuOption GameMenuInterface::showMenu() const
 {
   while(true)
   {
@@ -27,7 +27,7 @@ MenuOption GameMenuInterface::showMenu()
   }
 }
 
-void  GameMenuInterface::saveScore(Player player)
+void  GameMenuInterface::saveScore(Player player) const
 {
   if(player.getScore() == 0)
   {
@@ -78,7 +78,7 @@ void  GameMenuInterface::saveScore(Player player)
   } 
 }
 
-std::vector<Player> GameMenuInterface::getPlayers()
+std::vector<Player> GameMenuInterface::getPlayers() const
 {
   std::vector<Player> players;
   std::ifstream highScoreStream("highscore.txt");
@@ -103,7 +103,7 @@ std::vector<Player> GameMenuInterface::getPlayers()
   return players; 
 }
 
-void GameMenuInterface::showHighscore()
+void GameMenuInterface::showHighscore() const
 {
   auto players=getPlayers();
   std::cout << "Highscores:" << std::endl;
@@ -115,7 +115,7 @@ void GameMenuInterface::showHighscore()
 }
 
   
-Player GameMenuInterface::addPlayer()
+Player GameMenuInterface::addPlayer() const
 {
   std::cout << "Please enter your name: ";
   std::string name;
@@ -123,7 +123,7 @@ Player GameMenuInterface::addPlayer()
   return Player{name}; 
 }
 
-Player GameMenuInterface::selectPlayer()
+Player GameMenuInterface::selectPlayer() const
 {
   std::vector<Player> players = getPlayers();
   if(players.empty())
